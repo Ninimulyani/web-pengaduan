@@ -18,7 +18,7 @@ function RandomAvatar(){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Kantor Kelurahan Tamalanrea</title>
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/logo.ico" width="20" >
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- font Awesome CSS -->
@@ -53,7 +53,7 @@ function RandomAvatar(){
                 <div class="modal-body">
                     <p class="text-center">Pengaduan Berhasil Di Kirim</p>
                     <p class="text-center">Untuk Mengetahui Status Pengaduan</p>
-                    <p class="text-center">Silahkan Buka Menu <a href="lihat">Lihat Pengaduan</a> </p>
+                    <p class="text-center">Silahkan Buka Menu <a href="lihat.php">Lihat Pengaduan</a> </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn button-green" onclick="location.href='home';" data-dismiss="modal">Tutup</button>
@@ -85,7 +85,7 @@ function RandomAvatar(){
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="">
-                        <img alt="Brand" src="images/bangkalan.png">
+                        <img alt="Brand" src="images/logo.png" width="40">
                     </a>
                 </div>
 
@@ -93,23 +93,23 @@ function RandomAvatar(){
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav nav-link">
                         <li class="active"><a href="">HOME</a></li>
-                        <li><a href="cara">CARA</a></li>
+                        <li><a href="cara.php">CARA</a></li>
                         <li class="dropdown">
-                            <a href="profildinas" class="dropdown-toggle" data-toggle="dropdown">PROFIL DINAS <span class="caret"></span></a>
+                            <a href="profildinas.php" class="dropdown-toggle" data-toggle="dropdown">PROFIL DINAS <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="profildinas">Profil Dinas</a></li>
+                                <li><a href="profildinas.php">Profil Dinas</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Visi dan Misi</a></li>
+                                <li><a href="profildinas.php">Visi dan Misi</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Struktur Organisasi</a></li>
+                                <li><a href="profildinas.php">Struktur Organisasi</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Motto / Maklumat Pelayanan</a></li>
+                                <li><a href="profildinas.php">Motto / Maklumat Pelayanan</a></li>
                             </ul>
                         </li>
-                        <li><a href="faq">FAQ</a></li>
-                        <li><a href="bantuan">BANTUAN</a></li>
-                        <li><a href="kontak">KONTAK</a></li>
-                        <li><a href="login-user.php">LOGIN</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="bantuan.php">BANTUAN</a></li>
+                        <li><a href="kontak.php">KONTAK</a></li>
+                        <li><a href="../../login.php">LOGIN</a></li>
                         <li><a href="register-user.php">REGISTER</a></li>
                     </ul>
                     <!-- <ul class="nav navbar-nav navbar-right nav-link">
@@ -147,7 +147,7 @@ function RandomAvatar(){
                 </div>
             </div>
             <div class="item">
-                <img src="images/header_03.jpg" alt="...">
+                <img src="images/header_3.jpg" alt="...">
                 <div class="carousel-caption">
                     <h2 class="animated bounceInUp">Pengumuman</h2>
                 </div>
@@ -226,7 +226,7 @@ function RandomAvatar(){
                         </div>
                         <div class="info">
                             <h3 class="text-center">twitter</h3>
-                            <a class="twitter-timeline" href="https://twitter.com/disdukcapilbkl?ref_src=twsrc%5Etfw" data-width="500" data-height="300">Tweets by disdukcapilbkl</a>
+                            <a class="twitter-timeline" href="https://x.com/Kel_Tamalanrea?s=20" data-width="500" data-height="300">Tweets by kelurahantamalanrea</a>
                             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                         </div>
                     </div>
@@ -239,9 +239,9 @@ function RandomAvatar(){
                         </div>
                         <div class="info">
                             <h3 class="text-center">facebook</h3>
-                            <div class="fb-page" data-height="300" data-width="500" data-href="https://www.facebook.com/dispendukcapilbkl" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                                <blockquote cite="https://www.facebook.com/dispendukcapilbkl" class="fb-xfbml-parse-ignore">
-                                    <a href="https://www.facebook.com/dispendukcapilbkl">Dispenduk dan Capil Kabupaten Bangkalan</a>
+                            <div class="fb-page" data-height="300" data-width="500" data-href="https://web.facebook.com/profile.php?id=100072110929327" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote cite="https://web.facebook.com/profile.php?id=100072110929327" class="fb-xfbml-parse-ignore">
+                                    <a href="https://web.facebook.com/profile.php?id=100072110929327">Kantor Kelurahan Tamalanrea</a>
                                 </blockquote>
                             </div>
                         </div>
@@ -309,8 +309,8 @@ function RandomAvatar(){
                     </li>
                 </ul>
                 <p class="mb-0">
-                    Jalan Soekarno-Hatta No 50
-                    <br>Bangkalan, Jawa Timur
+                Jl. Bumi Tamalanrea Permai No.1, Tamalanrea, 
+                    <br>Kec. Tamalanrea, Kota Makassar, Sulawesi Selatan
                 </p>
             </div>
             <div class="col-md-4 mb-5 mb-lg-0">
@@ -329,7 +329,7 @@ function RandomAvatar(){
                         </a>
                     </li>
                     <li class="list-inline-item">
-                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://twitter.com/disdukcapilbkl">
+                        <a class="btn btn-outline-light btn-social text-center rounded-circle" href="https://x.com/Kel_Tamalanrea?s=20">
                             <i class="fa fa-fw fa-twitter"></i>
                         </a>
                     </li>
@@ -345,9 +345,9 @@ function RandomAvatar(){
                     </li>
                 </ul>
                 <p class="mb-0">
-                    031-3095331 <br>
-                    dispendukcapil@bangkalankab.go.id <br>
-                    dispendukcapil.bangkalan@gmail.com
+                    90245 <br>
+                    kelurahantamalanrea@tamalanrea.go.id <br>
+                    kelurahan.tamalanrea@gmail.com
                 </p>
             </div>
         </div>

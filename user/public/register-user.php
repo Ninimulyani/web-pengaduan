@@ -1,43 +1,48 @@
 <?php
-require_once("database.php");
+require_once ("database.php");
 
 if (isset($_POST['register'])) {
     $nama = $_POST['nama'];
+    $username = $_POST['username'];
     $alamat = $_POST['alamat'];
     $email = $_POST['email'];
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // Menggunakan password_hash() untuk mengenkripsi kata sandi
+    $password = md5($_POST['password']); // Menggunakan password_hash() untuk mengenkripsi kata sandi
 
-    $sql = "INSERT INTO user (nama, alamat, email, password) VALUES (?, ?, ?, ?)";
-    $stmt = $db->prepare($sql);
+    // Periksa apakah semua field yang diperlukan diisi
+    if (!empty($nama) && !empty($alamat) && !empty($email) && !empty($_POST['password'])) {
+        $sql = "INSERT INTO user (nama,username, alamat, email, password) VALUES (?, ?, ?, ?, ?)";
+        $stmt = $koneksi->prepare($sql);
 
-    if ($stmt) {
-        $stmt->bind_param("ssss", $nama, $alamat, $email, $password);
+        if ($stmt) {
+            $stmt->bind_param("sssss", $nama, $username, $alamat, $email, $password);
 
-        if ($stmt->execute()) {
-            session_start();
-            $_SESSION['email'] = $email;
-            $_SESSION['status'] = "register";
-            header('location:index.php');
+            if ($stmt->execute()) {
+                session_start();
+                $_SESSION['email'] = $email;
+                $_SESSION['status'] = "register";
+                header('location:../../login.php');
+            } else {
+                echo "<script>
+                alert('Register Gagal, Periksa Email dan Password Anda!');
+                window.location.href = '../user/';
+                </script>";
+            }
+
+            $stmt->close();
         } else {
             echo "<script>
-            alert('Register Gagal, Periksa Email dan Password Anda!');
+            alert('Gagal menyiapkan pernyataan SQL.');
             window.location.href = '../user/';
             </script>";
         }
-
-        $stmt->close();
     } else {
         echo "<script>
-        alert('Gagal menyiapkan pernyataan SQL.');
+        alert('Pendaftaran Gagal, Harap Isi Semua Informasi.');
         window.location.href = '../user/';
         </script>";
     }
-} else {
-    echo "<script>
-    alert('Pendaftaran Gagal, Harap Isi Semua Informasi.');
-    window.location.href = '../user/';
-    </script>";
 }
+
 ?>
 
 
@@ -79,7 +84,7 @@ if (isset($_POST['register'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/logo.ico" width="20">
     <title>Register - Pengaduan Masyarakat Kelurahan Tamalanrea</title>
     
     <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -99,6 +104,10 @@ if (isset($_POST['register'])) {
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nama</label>
                         <input class="form-control" id="nama" type="text" name="nama" aria-describedby="userlHelp" placeholder="Masukkan Nama" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Username</label>
+                        <input class="form-control" id="username" type="text" name="username" aria-describedby="userlHelp" placeholder="Masukkan Username" required>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Alamat</label>

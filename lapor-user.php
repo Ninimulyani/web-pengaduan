@@ -1,8 +1,8 @@
-<?php
+<?phpe
 
 ?>
 <?php
-    require_once("../private/database.php");
+    require_once("user/private/database.php");
     $statement = $db->query("SELECT id FROM `laporan` ORDER BY id DESC LIMIT 1");
     foreach ($statement as $key ) {
         // get max id from tabel laporan
@@ -16,13 +16,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Lapor | Dispendukcapil Bangkalan</title>
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/logo.ico" width="20">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="user/public/css/bootstrap.css">
     <!-- font Awesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="user/public/css/font-awesome.min.css">
     <!-- Main Styles CSS -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="user/public/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -38,33 +38,33 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="home">
-                        <img alt="Brand" src="images/bangkalan.png">
+                    <a class="navbar-brand" href="home.php">
+                        <img alt="Brand" src="user/public/images/logo.png" width="40" >
                     </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="home">HOME</a></li>
-                        <li class="active"><a href="lapor">LAPOR</a></li>
-                        <li><a href="lihat">LIHAT PENGADUAN</a></li>
-                        <li><a href="cara">CARA</a></li>
+                        <li><a href="user/public/home.php">HOME</a></li>
+                        <li class="active"><a href="user/public/lapor.php">LAPOR</a></li>
+                        <li><a href="user/public/lihat.php">LIHAT PENGADUAN</a></li>
+                        <li><a href="user/public/cara.php">CARA</a></li>
                         <li class="dropdown">
-                            <a href="profildinas" class="dropdown-toggle" data-toggle="dropdown">PROFIL DINAS <span class="caret"></span></a>
+                            <a href="user/public/profildinas.php" class="dropdown-toggle" data-toggle="dropdown">PROFIL DINAS <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="profildinas">Profil Dinas</a></li>
+                                <li><a href="user/public/profildinas.php">Profil Dinas</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Visi dan Misi</a></li>
+                                <li><a href="user/public/profildinas.php">Visi dan Misi</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Struktur Organisasi</a></li>
+                                <li><a href="user/public/profildinas.php">Struktur Organisasi</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Motto / Maklumat Pelayanan</a></li>
+                                <li><a href="user/public/profildinas.php">Motto / Maklumat Pelayanan</a></li>
                             </ul>
                         </li>
-                        <li><a href="faq">FAQ</a></li>
-                        <li><a href="bantuan">BANTUAN</a></li>
-                        <li><a href="kontak">KONTAK</a></li>
+                        <li><a href="user/public/faq.php">FAQ</a></li>
+                        <li><a href="user/public/bantuan.php">BANTUAN</a></li>
+                        <li><a href="user/public/kontak.php">KONTAK</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

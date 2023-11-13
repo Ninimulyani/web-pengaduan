@@ -65,7 +65,7 @@
                 <li class="sidebar-profile nav-item" data-toggle="tooltip" data-placement="right" title="Admin">
                     <div class="profile-main">
                         <p class="image">
-                            <img alt="image" src="image/logo.png" width="80">
+                            <img alt="image" src="image/logo.pbg" width="80">
                             <span class="status"><i class="fa fa-circle text-success"></i></span>
                         </p>
                         <p>
@@ -333,7 +333,7 @@
                     <div class="modal-body">Pilih "Logout" jika anda ingin mengakhiri sesi.</div>
                     <div class="modal-footer">
                         <button class="btn btn-close card-shadow-2 btn-sm" type="button" data-dismiss="modal">Batal</button>
-                        <a class="btn btn-primary btn-sm card-shadow-2" href="logout">Logout</a>
+                        <a class="btn btn-primary btn-sm card-shadow-2" href="login.php">Logout</a>
                     </div>
                 </div>
             </div>

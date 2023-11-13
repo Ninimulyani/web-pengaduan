@@ -40,7 +40,7 @@ if(isset($_POST['submit'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Lihat Pengaduan | Dispendukcapil Bangkalan</title>
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/logo.ico" width="20">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!-- font Awesome CSS -->
@@ -92,33 +92,33 @@ if(isset($_POST['submit'])) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="home">
-                        <img alt="Brand" src="images/bangkalan.png">
+                    <a class="navbar-brand" href="home.php">
+                        <img alt="Brand" src="images/logo.png" width="40">
                     </a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a href="home">HOME</a></li>
-                        <li><a href="lapor">LAPOR</a></li>
+                        <li><a href="home.php">HOME</a></li>
+                        <li><a href="lapor.php">LAPOR</a></li>
                         <li class="active"><a href="lihat">LIHAT PENGADUAN</a></li>
-                        <li><a href="cara">CARA</a></li>
+                        <li><a href="cara.php">CARA</a></li>
                         <li class="dropdown">
-                            <a href="profildinas" class="dropdown-toggle" data-toggle="dropdown">PROFIL DINAS <span class="caret"></span></a>
+                            <a href="profildinas.php" class="dropdown-toggle" data-toggle="dropdown">PROFIL DINAS <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="profildinas">Profil Dinas</a></li>
+                                <li><a href="profildinas.php">Profil Dinas</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Visi dan Misi</a></li>
+                                <li><a href="profildinas.php">Visi dan Misi</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Struktur Organisasi</a></li>
+                                <li><a href="profildinas.php">Struktur Organisasi</a></li>
                                 <li class="divider"></li>
-                                <li><a href="profildinas">Motto / Maklumat Pelayanan</a></li>
+                                <li><a href="profildinas.php">Motto / Maklumat Pelayanan</a></li>
                             </ul>
                         </li>
-                        <li><a href="faq">FAQ</a></li>
-                        <li><a href="bantuan">BANTUAN</a></li>
-                        <li><a href="kontak">KONTAK</a></li>
+                        <li><a href="faq.php">FAQ</a></li>
+                        <li><a href="bantuan.php">BANTUAN</a></li>
+                        <li><a href="kontak.php">KONTAK</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->

@@ -29,27 +29,22 @@ if(isset($_POST['login'])){
 
     
     $message = "";
-    if (isset($_POST['login']) && $_POST['login'] == "Login") {
-        $username    = $_POST['username']; 
-        $password    = $_POST['password']; 
-
-        $sql = "SELECT * FROM admin WHERE username = :username and password = SHA1(:password, 0)";
-        $stmt = $db->prepare($sql);
-        $stmt->bindValue(':username', $username);
-        $stmt->bindValue(':password', $password);
-        $stmt->execute();
-        $valid_user = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        if($valid_user){
-                
-                session_start();
-                $_SESSION["admin"] = $username;
-                
-                header("Location: index");
-        }
-        
-        else {
-            $message = "Username atau Password Salah";
+    if(isset($_POST['login'])){
+        $username = $_POST['username'];
+        $password = md5($_POST['password']);
+    
+        $login = mysqli_query($koneksi, "SELECT * FROM user WHERE username='$username' and password='$password'");
+        $cek = mysqli_num_rows($login);
+    
+        if($cek > 0) {
+            $_SESSION['username'] = $username;
+            $_SESSION['status'] = "login";
+            header('location:lapor-user.php');
+        } else {
+            echo "<script>
+            alert('Login Gagal, Periksa Username dan Password Anda!');
+            header('location:../admin/');
+                 </script>";
         }
     }
  ?>
@@ -62,7 +57,7 @@ if(isset($_POST['login'])){
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="images/logo.ico" width="20">
     <title>Login - Pengaduan Masyarakat Kelurahan Tamalanrea</title>
     
     <link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -75,7 +70,7 @@ if(isset($_POST['login'])){
 <body class="bg-dark">
     <div class="container">
         <div class="card container card-login mx-auto mt-5">
-            <h3 class="text-center" style="padding-top:8px; font-family: monospace;">Login Admin</h3>
+            <h3 class="text-center" style="padding-top:8px; font-family: monospace;">Login</h3>
             <hr class="custom">
             <div class="card-body">
                 <form method="post">

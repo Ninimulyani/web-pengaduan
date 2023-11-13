@@ -34,13 +34,8 @@ if(isset($_POST['login'])){
         $password    = $_POST['password']; 
 
         $sql = "SELECT * FROM user WHERE email = :email and password = SHA1(:password, 0)";
-        $stmt = $db->prepare($sql);
-        $stmt->bindValue(':email', $email);
-        $stmt->bindValue(':password', $password);
-        $stmt->execute();
-        $valid_user = $stmt->fetch(PDO::FETCH_ASSOC);
-        
-        if($valid_user){
+        $stmt = $koneksi->prepare($sql);
+        if($stmt){
                 
                 session_start();
                 $_SESSION["user"] = $email;
